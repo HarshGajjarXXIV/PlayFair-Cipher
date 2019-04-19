@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PlayFair Cipher</string>
+    <string name="enter_text">Enter text...</string>
+    <string name="encrypt">Encrypt</string>
+    <string name="decrypt">Decrypt</string>
+    <string name="enter_key">Enter secret key...</string>
+    <string name="banner_decryption">Decryption</string>
+    <string name="banner_encryption">Encryption</string>
+</resources>

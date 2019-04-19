@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="#EEEEEE"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/mainTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minLines="1"
+        android:maxLines="3"
+        android:isScrollContainer="true"
+        android:ems="10"
+        android:text=""
+        android:textSize="20sp"
+        android:hint="@string/enter_text"
+        android:inputType="text"
+        android:digits="0123456789
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                        abcdefghijklmnopqrstuvwxyz
+                        ~`!@#$₹€¥£¢%^*()_-+=[]{}\\|:;,.?/
+                        &quot; &apos; &amp; &lt; &gt;"
+        android:singleLine="?android:attr/windowOverscan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+
+    <RadioGroup
+        android:id="@+id/rbGrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyTxt">
+
+        <RadioButton
+            android:id="@+id/encRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/encrypt" />
+
+        <RadioButton
+            android:id="@+id/decRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/decrypt" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/keyTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minLines="1"
+        android:maxLines="3"
+        android:isScrollContainer="true"
+        android:ems="10"
+        android:text=""
+        android:textSize="20sp"
+        android:hint="@string/enter_key"
+        android:inputType="text"
+        android:digits="0123456789
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                        abcdefghijklmnopqrstuvwxyz
+                        ~`!@#$₹€¥£¢%^*()_-+=[]{}\\|:;,.?/
+                        &quot; &apos; &amp; &lt; &gt;"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTxt"
+        android:importantForAutofill="no" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#E0E0E0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bannerTxt">
+
+        <TextView
+            android:id="@+id/resultTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scrollView2" />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/bannerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbGrp" />
+
+</android.support.constraint.ConstraintLayout>
